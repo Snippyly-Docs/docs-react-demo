@@ -3,6 +3,10 @@ import { useSnippylyClient } from '@snippyly/react';
 import { generateUserData } from './util/user';
 import styles from './App.module.css';
 
+import Tag from './components/tag/Tag';
+
+import PencilIcon from './icons/pencil.svg';
+
 const App = () => {
 
   const { client } = useSnippylyClient();
@@ -16,7 +20,53 @@ const App = () => {
 
   }, [client]);
 
-  return <div className={styles['app-container']}>My Snippyly App</div>;
+  return (
+    <div className={styles['app-container']}>
+      <div className={styles['navbar']}></div>
+      <div className={styles['content']}>
+        <img src={PencilIcon} />
+        <h1>Project KickOff</h1>
+
+        <br />
+
+        <div className={styles['tag-container']}>
+          <Tag bgColor="#3772FF" text="#team-product" />
+          <Tag bgColor="#625DF5" text="#q1" />
+        </div>
+
+        <br />
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. </p>
+
+        <br />
+
+        <div className={styles['checkbox-container']}>
+          <input type="checkbox"></input>
+          <b>Increase conversion by 5%</b>
+        </div>
+        
+
+        <div className={styles['checkbox-container']}>
+          <input type="checkbox"></input>
+          <b>AI feature</b>
+        </div>
+
+        <div className={styles['checkbox-container']}>
+          <input type="checkbox"></input>
+          <b>Capture the AllSpark</b>
+        </div>
+
+        <div className={styles['checkbox-container']}>
+          <input type="checkbox"></input>
+          <b>Steal the Declaration of Independence</b>
+        </div>
+
+        <br />
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. </p>
+      </div>
+    </div>
+  );
 };
 
 export default App;

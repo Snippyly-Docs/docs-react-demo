@@ -1,10 +1,36 @@
 
-@font-face {
-  font-family: 'Poppins';
-  src: url('./fonts/Poppins-Regular.ttf') format('truetype');
-}
-
 .app-container {
   font-family: Poppins !important;
-  padding: 2vw;
+  flex: 1;
+}
+
+.navbar {
+  height: 9.61vh;
+  margin-left: 1.875vw;
+  margin-right: 1.875vw;
+  border-bottom: 1px solid #D4D6DF;
+}
+
+.content {
+  height: calc(100vh - 9.61vh);
+  margin-left: 9.375vw;
+  margin-right: 42.03vw;
+  margin-top: 7.69vh;
+}
+
+.checkbox-container > b {
+  margin-left: 0.3vw;
+}
+
+.checkbox-container + .checkbox-container {
+  margin-top: 2vh
+}
+
+p {
+  color: #777E90;
+}
+
+.tag-container {
+  display: flex;
+  gap: 0.6vw;
 }
