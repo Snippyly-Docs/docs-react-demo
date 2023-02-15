@@ -25,7 +25,7 @@ const App = () => {
       <div className={styles['navbar']}></div>
       <div className={styles['content']}>
         <img src={PencilIcon} />
-        <h1>Project KickOff</h1>
+        <h1 contentEditable={true}>Project KickOff</h1>
 
         <br />
 
@@ -36,34 +36,34 @@ const App = () => {
 
         <br />
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. </p>
+        <p contentEditable={true}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. </p>
 
         <br />
 
         <div className={styles['checkbox-container']}>
           <input type="checkbox"></input>
-          <b>Increase conversion by 5%</b>
+          <b contentEditable={true}>Increase conversion by 5%</b>
         </div>
         
 
         <div className={styles['checkbox-container']}>
           <input type="checkbox"></input>
-          <b>AI feature</b>
+          <b contentEditable={true}>AI feature</b>
         </div>
 
         <div className={styles['checkbox-container']}>
           <input type="checkbox"></input>
-          <b>Capture the AllSpark</b>
+          <b contentEditable={true}>Capture the AllSpark</b>
         </div>
 
         <div className={styles['checkbox-container']}>
           <input type="checkbox"></input>
-          <b>Steal the Declaration of Independence</b>
+          <b contentEditable={true}>Steal the Declaration of Independence</b>
         </div>
 
         <br />
         
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. </p>
+        <p contentEditable={true}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. </p>
       </div>
     </div>
   );
