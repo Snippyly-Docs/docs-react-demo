@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useSnippylyClient } from '@snippyly/react';
+import { SnippylySidebarButton, useSnippylyClient } from '@snippyly/react';
 import { generateUserData } from './util/user';
 import styles from './App.module.css';
 
@@ -22,13 +22,14 @@ const App = () => {
 
     const commentElement = client.getCommentElement();
     commentElement.enableTextComments(true);
-
+    commentElement.enableStreamMode(true);
   }, [client]);
 
   return (
     <div className={styles['app-container']}>
       <div className={styles['navbar']}>
-        <SnippylyPresence />
+        <SnippylySidebarButton className={styles['sidebar-button']} />
+        <SnippylyPresence containerClass={styles['presence']} />
       </div>
       <div className={styles['content']}>
         <img className={styles['icon']} src={PencilIcon} />
