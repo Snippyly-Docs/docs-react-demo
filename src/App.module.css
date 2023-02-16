@@ -9,6 +9,9 @@
   margin-left: 1.875vw;
   margin-right: 1.875vw;
   border-bottom: 1px solid #D4D6DF;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .content {

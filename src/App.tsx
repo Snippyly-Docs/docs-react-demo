@@ -4,6 +4,7 @@ import { generateUserData } from './util/user';
 import styles from './App.module.css';
 
 import Tag from './components/tag/Tag';
+import { SnippylyPresence } from "@snippyly/react";
 
 import PencilIcon from './icons/pencil.svg';
 
@@ -17,12 +18,15 @@ const App = () => {
 
     const user = generateUserData();
     client.identify(user);
+    client.setDocumentId('docs-react-demo');
 
   }, [client]);
 
   return (
     <div className={styles['app-container']}>
-      <div className={styles['navbar']}></div>
+      <div className={styles['navbar']}>
+        <SnippylyPresence />
+      </div>
       <div className={styles['content']}>
         <img src={PencilIcon} />
         <h1 contentEditable={true}>Project KickOff</h1>
