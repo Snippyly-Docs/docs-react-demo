@@ -20,6 +20,9 @@ const App = () => {
     client.identify(user);
     client.setDocumentId('docs-react-demo');
 
+    const commentElement = client.getCommentElement();
+    commentElement.enableTextComments(true);
+
   }, [client]);
 
   return (
