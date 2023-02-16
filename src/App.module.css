@@ -29,11 +29,25 @@
   margin-top: 2vh
 }
 
+h1 {
+  font-size: 2vw;
+}
+
+b {
+  font-size: 1vw;
+}
+
 p {
   color: #777E90;
+  font-size: 1vw;
 }
 
 .tag-container {
   display: flex;
   gap: 0.6vw;
+}
+
+.icon {
+  height: 2vw;
+  width: 2vw;
 }

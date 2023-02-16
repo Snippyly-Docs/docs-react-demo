@@ -28,7 +28,7 @@ const App = () => {
         <SnippylyPresence />
       </div>
       <div className={styles['content']}>
-        <img src={PencilIcon} />
+        <img className={styles['icon']} src={PencilIcon} />
         <h1 contentEditable={true}>Project KickOff</h1>
 
         <br />
