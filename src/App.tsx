@@ -33,7 +33,7 @@ const App = () => {
       </div>
       <div className={styles['content']}>
         <img className={styles['icon']} src={PencilIcon} />
-        <h1 contentEditable={true}>Project KickOff</h1>
+        <h1 suppressContentEditableWarning={true} contentEditable={true}>Project KickOff</h1>
 
         <br />
 
@@ -44,34 +44,34 @@ const App = () => {
 
         <br />
 
-        <p contentEditable={true}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. </p>
+        <p suppressContentEditableWarning={true} contentEditable={true}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. </p>
 
         <br />
 
         <div className={styles['checkbox-container']}>
           <input type="checkbox"></input>
-          <b contentEditable={true}>Increase conversion by 5%</b>
+          <b suppressContentEditableWarning={true} contentEditable={true}>Increase conversion by 5%</b>
         </div>
         
 
         <div className={styles['checkbox-container']}>
           <input type="checkbox"></input>
-          <b contentEditable={true}>AI feature</b>
+          <b suppressContentEditableWarning={true} contentEditable={true}>AI feature</b>
         </div>
 
         <div className={styles['checkbox-container']}>
           <input type="checkbox"></input>
-          <b contentEditable={true}>Capture the AllSpark</b>
+          <b suppressContentEditableWarning={true} contentEditable={true}>Capture the AllSpark</b>
         </div>
 
         <div className={styles['checkbox-container']}>
           <input type="checkbox"></input>
-          <b contentEditable={true}>Steal the Declaration of Independence</b>
+          <b suppressContentEditableWarning={true} contentEditable={true}>Steal the Declaration of Independence</b>
         </div>
 
         <br />
         
-        <p contentEditable={true}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. </p>
+        <p suppressContentEditableWarning={true} contentEditable={true}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. </p>
       </div>
     </div>
   );
