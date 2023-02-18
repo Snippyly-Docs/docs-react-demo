@@ -10,6 +10,10 @@ import PencilIcon from './icons/pencil.svg';
 
 const App = () => {
 
+  /**
+   * Snippyly Code Example
+   * Initializes the Snippyly SDK.
+   */
   const { client } = useSnippylyClient();
 
   useEffect(() => {
@@ -20,9 +24,15 @@ const App = () => {
     client.identify(user);
     client.setDocumentId('docs-react-demo');
 
+    /**
+     * Snippyly Code Example
+     * Feature: Comments (Text mode)
+     * Feature: Comments (Streaming mode)
+     */
     const commentElement = client.getCommentElement();
     commentElement.enableTextComments(true);
     commentElement.enableStreamMode(true);
+
   }, [client]);
 
   return (
