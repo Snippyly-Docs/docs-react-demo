@@ -1,10 +1,16 @@
 import { useEffect } from "react";
-import { SnippylySidebarButton, useSnippylyClient } from '@snippyly/react';
+import { 
+  SnippylySidebarButton, 
+  useSnippylyClient, 
+  SnippylyPresence,
+  SnippylyHuddleTool,
+  SnippylyRecorderTool,
+  SnippylyTagTool
+} from '@snippyly/react';
 import { generateUserData } from './util/user';
 import styles from './App.module.css';
 
 import Tag from './components/tag/Tag';
-import { SnippylyPresence } from "@snippyly/react";
 
 import PencilIcon from './icons/pencil.svg';
 
@@ -40,6 +46,9 @@ const App = () => {
     <div className={styles['app-container']}>
       <div className={styles['navbar']}>
         <SnippylySidebarButton className={styles['sidebar-button']} />
+        <SnippylyTagTool />
+        <SnippylyRecorderTool type="all" />
+        <SnippylyHuddleTool type="all" />
         <SnippylyPresence containerClass={styles['presence']} />
       </div>
       <div className={styles['content']}>

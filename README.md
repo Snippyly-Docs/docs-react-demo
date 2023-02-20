@@ -10,6 +10,9 @@ This is an example Docs React app with **Snippyly** SDK features.
 - Comments (Text mode)
 - Comments (Streaming mode)
 - Comments Sidebar
+- Huddle
+- Recorder
+- Tags
 
 ## Code Examples
 
