@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/docs-react-demo/static/css/main.098d533b.css",
+    "main.js": "/docs-react-demo/static/js/main.cb1d31e2.js",
+    "static/media/pencil.svg": "/docs-react-demo/static/media/pencil.f2d194163839545f48575075fa580a06.svg",
+    "index.html": "/docs-react-demo/index.html",
+    "main.098d533b.css.map": "/docs-react-demo/static/css/main.098d533b.css.map",
+    "main.cb1d31e2.js.map": "/docs-react-demo/static/js/main.cb1d31e2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.098d533b.css",
+    "static/js/main.cb1d31e2.js"
+  ]
+}
