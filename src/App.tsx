@@ -21,6 +21,7 @@ const App = () => {
     if (!client) return;
 
     const user = generateUserData();
+    console.log(user)
     client.identify(user);
     client.setDocumentId('docs-react-demo');
 
