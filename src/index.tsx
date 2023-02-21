@@ -6,18 +6,16 @@ import { SnippylyProvider, SnippylyCursor, SnippylyComments, SnippylyCommentsSid
 const rootContainer = document.getElementById('root');
 const root = createRoot(rootContainer as HTMLElement);
 root.render(
-  <React.StrictMode>
-    <SnippylyProvider apiKey="WDMgKshFEsPTqvBjUcH3">
-      {/**
+  <SnippylyProvider apiKey="WDMgKshFEsPTqvBjUcH3">
+    {/**
        * Snippyly Code Example
        * Feature: Comments
        * Feature: Comments Sidebar -- Step #1
        * Feature: Live Cursors
        */}
-      <SnippylyComments />
-      <SnippylyCursor />
-      <SnippylyCommentsSidebar />
-      <App />
-    </SnippylyProvider>
-  </React.StrictMode>
+    <SnippylyComments />
+    <SnippylyCursor />
+    <SnippylyCommentsSidebar />
+    <App />
+  </SnippylyProvider>
 );
