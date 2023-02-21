@@ -10,24 +10,6 @@ import PencilIcon from './icons/pencil.svg';
 
 const App = () => {
 
-  useEffect(() => {
-
-    const isDataReset = window.sessionStorage.getItem('_snippyly_demo_reset');
-
-    if (isDataReset === null) {
-      fetch(
-        "https://us-central1-snippyly-sdk-prod.cloudfunctions.net/resetDemoData",
-        {
-          headers: { "Content-Type": "application/json" },
-          method: "POST",
-          body: JSON.stringify({ documentId: 'docs-react-demo' }),
-        }
-      );
-      window.sessionStorage.setItem('_snippyly_demo_reset', 'true');
-    }
-    
-  }, []);
-
   /**
    * Snippyly Code Example
    * Initializes the Snippyly SDK.
@@ -50,6 +32,31 @@ const App = () => {
     const commentElement = client.getCommentElement();
     commentElement.enableTextComments(true);
     commentElement.enableStreamMode(true);
+
+  }, [client]);
+
+  useEffect(() => {
+
+    if (!client) return;
+
+    client.getPresenceElement().getOnlineUsersOnCurrentDocument().subscribe(users => {
+      if (users === null) return;
+      if (users.length === 0) {
+        const isDataReset = window.sessionStorage.getItem('_snippyly_demo_reset');
+
+        if (isDataReset === null) {
+          fetch(
+            "https://us-central1-snippyly-sdk-prod.cloudfunctions.net/resetDemoData",
+            {
+              headers: { "Content-Type": "application/json" },
+              method: "POST",
+              body: JSON.stringify({ documentId: 'docs-react-demo' }),
+            }
+          );
+          window.sessionStorage.setItem('_snippyly_demo_reset', 'true');
+        }
+      }
+    });
 
   }, [client]);
 
@@ -80,7 +87,7 @@ const App = () => {
           <input type="checkbox"></input>
           <b suppressContentEditableWarning={true} contentEditable={true}>Increase conversion by 5%</b>
         </div>
-        
+
 
         <div className={styles['checkbox-container']}>
           <input type="checkbox"></input>
@@ -98,7 +105,7 @@ const App = () => {
         </div>
 
         <br />
-        
+
         <p suppressContentEditableWarning={true} contentEditable={true}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. </p>
       </div>
     </div>
