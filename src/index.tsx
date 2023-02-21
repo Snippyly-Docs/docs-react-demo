@@ -15,9 +15,8 @@ import {
 const rootContainer = document.getElementById('root');
 const root = createRoot(rootContainer as HTMLElement);
 root.render(
-  <React.StrictMode>
-    <SnippylyProvider apiKey="WDMgKshFEsPTqvBjUcH3">
-      {/**
+  <SnippylyProvider apiKey="WDMgKshFEsPTqvBjUcH3">
+    {/**
        * Snippyly Code Example
        * Feature: Live Cursors
        * Feature: Comments -- Step #1
@@ -35,5 +34,4 @@ root.render(
       <SnippylyRecorderNotes />
       <App />
     </SnippylyProvider>
-  </React.StrictMode>
 );
