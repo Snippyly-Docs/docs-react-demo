@@ -2,22 +2,22 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import { 
-  SnippylyProvider,
-  SnippylyCursor, 
-  SnippylyComments, 
-  SnippylyCommentsSidebar,
-  SnippylyHuddle,
-  SnippylyTags,
-  SnippylyRecorderControlPanel,
-  SnippylyRecorderNotes
-} from '@snippyly/react';
+  VeltProvider,
+  VeltCursor, 
+  VeltComments, 
+  VeltCommentsSidebar,
+  VeltHuddle,
+  VeltTags,
+  VeltRecorderControlPanel,
+  VeltRecorderNotes
+} from '@veltdev/react';
 
 const rootContainer = document.getElementById('root');
 const root = createRoot(rootContainer as HTMLElement);
 root.render(
-  <SnippylyProvider apiKey="WDMgKshFEsPTqvBjUcH3">
+  <VeltProvider apiKey="WDMgKshFEsPTqvBjUcH3">
     {/**
-       * Snippyly Code Example
+       * Velt Code Example
        * Feature: Live Cursors
        * Feature: Comments -- Step #1
        * Feature: Comments Sidebar -- Step #1
@@ -25,13 +25,13 @@ root.render(
        * Feature: Tags -- Step #1
        * Feature: Recorder -- Step #1
        */}
-      <SnippylyComments />
-      <SnippylyCursor />
-      <SnippylyCommentsSidebar />
-      <SnippylyHuddle />
-      <SnippylyTags />
-      <SnippylyRecorderControlPanel />
-      <SnippylyRecorderNotes />
+      <VeltComments />
+      <VeltCursor />
+      <VeltCommentsSidebar />
+      <VeltHuddle />
+      <VeltTags />
+      <VeltRecorderControlPanel />
+      <VeltRecorderNotes />
       <App />
-    </SnippylyProvider>
+    </VeltProvider>
 );

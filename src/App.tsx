@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import { 
-  SnippylySidebarButton, 
-  useSnippylyClient, 
-  SnippylyPresence,
-  SnippylyHuddleTool,
-  SnippylyRecorderTool,
-  SnippylyTagTool
-} from '@snippyly/react';
+  VeltSidebarButton, 
+  useVeltClient, 
+  VeltPresence,
+  VeltHuddleTool,
+  VeltRecorderTool,
+  VeltTagTool
+} from '@veltdev/react';
 import { generateUserData } from './util/user';
 import styles from './App.module.css';
 
@@ -17,10 +17,10 @@ import PencilIcon from './icons/pencil.svg';
 const App = () => {
 
   /**
-   * Snippyly Code Example
-   * Initializes the Snippyly SDK.
+   * Velt Code Example
+   * Initializes the Velt SDK.
    */
-  const { client } = useSnippylyClient();
+  const { client } = useVeltClient();
 
   useEffect(() => {
 
@@ -32,13 +32,13 @@ const App = () => {
     client.setDocumentId('docs-react-demo');
 
     /**
-     * Snippyly Code Example
+     * Velt Code Example
      * Feature: Comments (Text mode)
      * Feature: Comments (Streaming mode)
      */
     const commentElement = client.getCommentElement();
-    commentElement.enableTextComments(true);
-    commentElement.enableStreamMode(true);
+    commentElement.enableTextComments();
+    commentElement.enableStreamMode();
 
   }, [client]);
 
@@ -46,7 +46,7 @@ const App = () => {
 
     if (!client) return;
 
-    client.getPresenceElement().getOnlineUsersOnCurrentDocument().subscribe(users => {
+    client.getPresenceElement().getOnlineUsersOnCurrentDocument().subscribe((users: any) => {
       if (users === null) return;
       if (users.length === 0) {
         const isDataReset = window.sessionStorage.getItem('_snippyly_demo_reset');
@@ -70,11 +70,11 @@ const App = () => {
   return (
     <div className={styles['app-container']}>
       <div className={styles['navbar']}>
-        <SnippylySidebarButton className={styles['sidebar-button']} />
-        <SnippylyTagTool />
-        <SnippylyRecorderTool type="all" />
-        <SnippylyHuddleTool type="all" />
-        <SnippylyPresence containerClass={styles['presence']} />
+        <VeltSidebarButton className={styles['sidebar-button']} />
+        <VeltTagTool />
+        <VeltRecorderTool type="all" />
+        <VeltHuddleTool type="all" />
+        <VeltPresence />
       </div>
       <div className={styles['content']}>
         <img className={styles['icon']} src={PencilIcon} />
