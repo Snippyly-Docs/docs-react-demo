@@ -1,21 +1,21 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
-import { SnippylyProvider, SnippylyCursor, SnippylyComments, SnippylyCommentsSidebar } from '@snippyly/react';
+import { VeltProvider, VeltCursor, VeltComments, VeltCommentsSidebar } from '@veltdev/react';
 
 const rootContainer = document.getElementById('root');
 const root = createRoot(rootContainer as HTMLElement);
 root.render(
-  <SnippylyProvider apiKey="WDMgKshFEsPTqvBjUcH3">
+  <VeltProvider apiKey="WDMgKshFEsPTqvBjUcH3">
     {/**
-       * Snippyly Code Example
+       * Velt Code Example
        * Feature: Comments
        * Feature: Comments Sidebar -- Step #1
        * Feature: Live Cursors
        */}
-    <SnippylyComments />
-    <SnippylyCursor />
-    <SnippylyCommentsSidebar />
+    <VeltComments />
+    <VeltCursor />
+    <VeltCommentsSidebar />
     <App />
-  </SnippylyProvider>
+  </VeltProvider>
 );
